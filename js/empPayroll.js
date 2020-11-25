@@ -12,20 +12,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
         } catch (e) {
             nameError.textContent = e;
         }
-    });
-const salary = document.querySelector('#salary')
-const output = document.querySelector('.salary-output')
-output.textContent = salary.value;
-salary.addEventListener('input', function () {
+    }); 
+    const salary = document.querySelector('#salary');
+    const output = document.querySelector('.salary-output');
     output.textContent = salary.value;
+    salary.addEventListener('input', function () {
+        output.textContent = salary.value;
     });
-});
+}); 
 class EmployeePayrollData{
    //getters and setters
     get id() {return this._id;}
     set id(id){
         this._id=id;
     }
+    get name(){return this._name; }
     set name(name){
         let nameRegex = RegExp('^[A-Z]{1}[a-z]{3,}$')
         if(nameRegex.test(name)) this._name = name;
@@ -143,4 +144,13 @@ const unsetSelectedValue = (propertyValue) => {
 const setValue = (id, value) => {
     const element = document.querySelector(id);
     element.value = value;
+}
+function getEmpDataFromLocalStorage() {
+    return localStorage.getItem("EmployeePayrollList") ?
+        JSON.parse(localStorage.getItem("EmployeePayrollList")) :
+        [];
+}
+function getId() {
+    let empList = getEmpDataFromLocalStorage();
+    return empList.length + 1;
 }
