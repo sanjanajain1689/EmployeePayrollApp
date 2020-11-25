@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -26,6 +25,7 @@
               <div class="row-content">
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" id="name" name="name" placeholder="Your name..." required>
+                <error-output class="name-error" for="name"></error-output>
               </div>
               <div class="row-content">
                 <label class="label text" for="profile">Profile Image</label>
@@ -136,6 +136,7 @@
                     <option value="2017">2017</option>
                     <option value="2016">2016</option>
                 </select>
+                <error-output class="date-error" for="startDate"></error-output>
               </div>
               <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
@@ -151,4 +152,4 @@
             </form>
           </div>
         </body>
-    </html>
+        </html>
