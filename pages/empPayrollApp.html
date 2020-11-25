@@ -1,65 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/home.css">
-    <title>Employee Payroll Dashboard</title>
-    <script defer src="../js/home.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="../css/empPayrollApp.css" rel="stylesheet">
+  <title>Employee Payroll App</title>
+  <script defer src="../js/empPayrollApp.js"></script>
 </head>
-
 <body>
-    <header class="header_content">
-        <div class="logodiv">
-            <img src="../assets/prog.jpg" alt="program" width="8%">
-            <div>
-                <span class="employee">Employee</span><br>
-                <span class="payroll">Payroll</span>
-            </div>
-        </div>
-    </header>
-    <div class = "mainContent">
-        <div class = "headerContent">
-            <div class = "">
-                Employee Details <div class = "empCount">10</div>
-            </div>
-            <a href = "../pages/EmployeePayrollForm.html" class = "addButton">
-            <img src = "../assets/prog.jpg" alt = "" width="12%"> Add User</a>
-        </div>
+  <!-- UC 1 -->
+  <header class="header-content header">
+    <div class="logo-content">
+      <img src="../assets/images/logo.png" alt="Logo">
+      <div>
+          <span class="emp-text">Employee</span><br>
+          <span class="emp-text emp-payroll">Payroll</span>
+      </div>
     </div>
-
-    <table id="display" class="table">
-        <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Department</th>
-            <th>Salary</th>
-            <th>Start Date</th>
-            <th>Actions</th>
-        </tr>
-        <tr>
-        <td><img class="profile" alt="" src="..assets/img1.png"></td>
-        <td>Narayan Mahadevan</td>
-        <td>Male</td>
-        <td><div class='dept-label'>HR</div>
-            <div class='dept-label'>Finance</div></td>
-        <td>300000</td>
-        <td>1 Nov 2020</td>  
-        <td>
-            <img id="1" onclick="remove(this)" alt="delete" src="../assets/img2.png">
-            <img id="1" onclick="remove(this)" alt="delete" src="../assets/img2.png">
-        </td> 
-      </tr>
-    </table>
- <script src="../js/new_home.js"></script>
- <script src="../js/utility.js"></script>
- <script src="../js/site_properties.js"></script>
- <script src="../js/EmployeePayroll.js"></script>
-
-
+  </header>
+<div class="main-content">
+    <!-- UC 2 -->
+    <div class="header-content">
+      <div class="emp-detail-text">
+        Employee Details
+        <div class="emp-count">10</div>
+        <a href="../pages/empPayroll.html" class="add-button">
+          <img src="../assets/icons/add-24px.svg" alt="">Add User
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="table-main">
+    <table id = "table-display" class="table"></table>
+</div>
+<script defer src="../js/empPayroll.js"></script>
+<script defer src="../js/empPayrollApp.js"></script>
+<script defer src="../js/empProperties.js"></script>
+<script defer src="../js/empUtility.js"></script>
 </body>
-
 </html>
